@@ -1,28 +1,37 @@
 import React from 'react';
+import {DataType} from './App';
 
-
-
-export type AllDataType = {
-    data1: Array<DataType>
-    data2: Array<DataType>
+type TasksPropsType = {
+    data: DataType
 }
 
-export type DataType = {
-    title: string
-    student: Array<string>
-    tasks: Array<TasksType>
-}
-
-export type TasksType = {
-    taskId: number
-    isDone: boolean
-    title: string
-}
-
-export const Tasks:React.FC<AllDataType> = (props) => {
+export const Tasks = (props: TasksPropsType) => {
     return (
-        <div>
-
+        <div className="tasks">
+            <div>{props.data.title}</div>
+            <ul>
+                {props.data.tasks.map((el) => {
+                    return (
+                        <li key={el.taskId}>
+                            <ul>{el.title}</ul>
+                            <ul>{el.isDone}</ul>
+                        </li>
+                    )
+                })}
+            </ul>
+            <ul>
+                {props.data.students.map((st) => {
+                    return (
+                        <li>{st}</li>
+                    )
+                })}
+            </ul>
         </div>
     );
 };
+
+export default Tasks;
+
+
+
+
