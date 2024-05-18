@@ -2,7 +2,7 @@ import React from 'react';
 import {TasksPropsType} from './CommandType';
 
 
-export const Tasks = (props: TasksPropsType) => {
+export const Tasks: React.FC<TasksPropsType> = (props) => {
     return (
         <div className="tasks">
             <div>{props.data.title}</div>

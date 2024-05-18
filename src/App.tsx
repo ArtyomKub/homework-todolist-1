@@ -9,8 +9,6 @@ import Tasks from './Tasks';
 // -Don't forget to assign types to our data.
 
 
-
-
 function App() {
     const data1 = {
         title: 'What to do',

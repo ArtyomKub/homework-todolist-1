@@ -10,7 +10,6 @@ export type TasksType = {
     isDone: boolean
 }
 
-
 export type TasksPropsType = {
     data: DataType
 }
