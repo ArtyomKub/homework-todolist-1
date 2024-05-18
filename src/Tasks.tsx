@@ -1,9 +1,6 @@
 import React from 'react';
-import {DataType} from './App';
+import {TasksPropsType} from './CommandType';
 
-type TasksPropsType = {
-    data: DataType
-}
 
 export const Tasks = (props: TasksPropsType) => {
     return (
@@ -20,9 +17,9 @@ export const Tasks = (props: TasksPropsType) => {
                 })}
             </ul>
             <ul>
-                {props.data.students.map((st) => {
+                {props.data.students.map((st, index) => {
                     return (
-                        <li>{st}</li>
+                        <li key={index}>{st}</li>
                     )
                 })}
             </ul>
