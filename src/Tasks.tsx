@@ -2,6 +2,7 @@ import React from 'react';
 import {TasksPropsType} from './CommandType';
 
 
+
 export const Tasks: React.FC<TasksPropsType> = (props) => {
     return (
         <div className="tasks">
@@ -10,8 +11,8 @@ export const Tasks: React.FC<TasksPropsType> = (props) => {
                 {props.data.tasks.map((el) => {
                     return (
                         <li key={el.taskId}>
-                            <ul>{el.title}</ul>
-                            <ul>{el.isDone}</ul>
+                            <input type="checkbox" defaultChecked={el.isDone}/>
+                            <span>{el.title}</span>
                         </li>
                     )
                 })}

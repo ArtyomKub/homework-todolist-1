@@ -14,7 +14,7 @@ function App() {
         title: 'What to do',
         tasks: [
             {taskId: 1, title: 'HTML&CSS2', isDone: true},
-            {taskId: 2, title: 'JS2', isDone: true}
+            {taskId: 2, title: 'JS2', isDone: false}
         ],
         students: [
             'Jago Wormald1',
@@ -67,7 +67,7 @@ function App() {
     const data2 = {
         title: 'What to learn',
         tasks: [
-            {taskId: 1, title: 'HTML&CSS', isDone: true},
+            {taskId: 1, title: 'HTML&CSS', isDone: false},
             {taskId: 2, title: 'JS', isDone: true}
         ],
         students: [
